@@ -105,3 +105,18 @@ class CheckIn(SQLModel, table=True):
     device_time: datetime
     server_time: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
 
+
+class Direction(str, Enum):
+    INBOUND = "INBOUND"
+    OUTBOUND = "OUTBOUND"
+
+class SMSLog(SQLModel, table=True):
+    """
+    Create SMS table to save sms messages
+    """
+    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
+    phone_number: str = Field(index=True)
+    direction: Direction
+    message_body: str
+    sms_id: str | None = Field(default=None)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
