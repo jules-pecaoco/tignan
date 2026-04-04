@@ -1,10 +1,12 @@
 from datetime import datetime, timezone
 from enum import Enum
-from operator import ge
 import uuid
 
-from sqlmodel import Field, Integer, SQLModel
+from sqlmodel import Field, SQLModel
 
+# ===============
+# USERS TABLE
+# ===============
 
 class User(SQLModel, table=True):
     """
@@ -17,6 +19,10 @@ class User(SQLModel, table=True):
     role: str = Field(default="RESPONDER")
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
+
+# ===============
+# EVENTS TABLE
+# ===============
 
 class Event(SQLModel, table=True):
     """
@@ -31,6 +37,10 @@ class Event(SQLModel, table=True):
     is_active: bool = Field(default=False)
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
+
+# ===============
+# EVACUEE TABLE
+# ===============
 
 class RiskLevel(str, Enum):
     UNKNOWN = "UNKNOWN"
@@ -60,6 +70,10 @@ class Evacuee(SQLModel, table=True):
     enrolled_at: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
 
 
+# ===============
+# ALERT TABLE
+# ===============
+
 class AlertType(str, Enum):
     SOS = "SOS"
     MISSED_CHECKIN = "MISSED_CHECKIN"
@@ -84,6 +98,10 @@ class Alert(SQLModel, table=True):
     resolved_at: datetime | None = Field(default=None)
 
 
+# ===============
+# CHECK IN TABLE
+# ===============
+
 class CheckInStatus(str, Enum):
     SAFE = "SAFE"
     CRITICAL = "CRITICAL"
@@ -105,6 +123,10 @@ class CheckIn(SQLModel, table=True):
     device_time: datetime
     server_time: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
 
+
+# ===============
+# SMS TABLE
+# ===============
 
 class Direction(str, Enum):
     INBOUND = "INBOUND"
