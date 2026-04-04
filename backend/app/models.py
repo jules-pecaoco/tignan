@@ -83,3 +83,25 @@ class Alert(SQLModel, table=True):
     created_at: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
     resolved_at: datetime | None = Field(default=None)
 
+
+class CheckInStatus(str, Enum):
+    SAFE = "SAFE"
+    CRITICAL = "CRITICAL"
+
+class Channel(str, Enum):
+    APP = "APP"
+    SMS = "SMS"
+
+class CheckIn(SQLModel, table=True):
+    """
+    Create check_in table for tracking evacuee status
+    """
+    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
+    evacuee_id: uuid.UUID = Field(foreign_key="evacuee.id")
+    idempotency_key: str = Field(unique=True, index=True)
+    status: CheckInStatus
+    channel: Channel
+    battery_level: int | None = Field(default=None, ge=0, le=100)
+    device_time: datetime
+    server_time: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
+
