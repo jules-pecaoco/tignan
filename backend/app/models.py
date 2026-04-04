@@ -53,9 +53,9 @@ class Evacuee(SQLModel, table=True):
     phone_number: str = Field(index=True)
     risk_level: RiskLevel = RiskLevel.UNKNOWN
     condition_note: ConditionNote | None
-    lat: float | None
-    lng: float | None
-    location_text: str | None
+    lat: float | None = Field(default=None)
+    lng: float | None = Field(default=None)
+    location_text: str | None = Field(default=None)
     battery: int | None = Field(default=None, ge=0, le=100)
     enrolled_at: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
 
