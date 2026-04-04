@@ -26,3 +26,8 @@ dist-ssr
 # Environment variables
 .env
 .env-local
+
+# Python folders
+__pycache__/
+*.py[cod]
+*$py.class
