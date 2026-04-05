@@ -78,7 +78,7 @@ class AlertType(str, Enum):
     MISSED_CHECKIN = "MISSED_CHECKIN"
     LOW_BATTERY = "LOW_BATTERY"
 
-class Status(str, Enum):
+class AlertStatus(str, Enum):
     OPEN = "OPEN"
     AKNOWLEDGED = "AKNOWLEDGED"
     RESOLVED = "RESOLVED"
@@ -91,7 +91,7 @@ class Alert(SQLModel, table=True):
     event_id: uuid.UUID = Field(foreign_key="event.id")
     evacuee_id: uuid.UUID = Field(foreign_key="evacuee.id")
     alert_type: AlertType
-    status: Status = Field(default=Status.OPEN)
+    status: AlertStatus = Field(default=AlertStatus.OPEN)
     responder_id: uuid.UUID | None = Field(default=None, foreign_key="user.id")
     created_at: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
     resolved_at: datetime | None = Field(default=None)
