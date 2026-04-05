@@ -7,6 +7,7 @@ from app.db.database import engine
 from app.api import core
 
 import app.models
+from app.api.events.router import router as event_router
 from app.api.evacuees.router import router as enroll_router
 from app.api.checkins.router import router as checkins_router
 
@@ -27,6 +28,7 @@ app.add_middleware(
 )
 
 app.include_router(core.router)
+app.include_router(event_router)
 app.include_router(enroll_router)
 app.include_router(checkins_router)
 
