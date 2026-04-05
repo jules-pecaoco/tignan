@@ -29,10 +29,10 @@ def create_evacuee_enrollment(
         )
 
     # Check if evacuee has already registered
-    evacuee_select_statement = (select(Evacuee)
+    evacuee_select_stmt = (select(Evacuee)
                                 .where(Evacuee.phone_number == enroll_request.phone_number,
                                        Evacuee.event_id == event.id))
-    evacuee: Evacuee | None = db.exec(evacuee_select_statement).first()
+    evacuee: Evacuee | None = db.exec(evacuee_select_stmt).first()
 
     # If query returns a user it means it is a duplicate
     # Raise error to avoid duplicates
