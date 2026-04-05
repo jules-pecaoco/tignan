@@ -80,7 +80,7 @@ class AlertType(str, Enum):
 
 class AlertStatus(str, Enum):
     OPEN = "OPEN"
-    AKNOWLEDGED = "AKNOWLEDGED"
+    ACKNOWLEDGED = "ACKNOWLEDGED"
     RESOLVED = "RESOLVED"
 
 class Alert(SQLModel, table=True):
