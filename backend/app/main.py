@@ -7,11 +7,12 @@ from app.db.database import engine
 from app.api import core
 
 import app.models
+from app.api.evacuees.router import router as enroll_router
+from app.api.checkins.router import router as checkins_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # This runs once when the server boots. 
-    # It looks at models.py and creates the tables in Render!
     SQLModel.metadata.create_all(engine)
     yield
 
@@ -19,11 +20,13 @@ app = FastAPI(lifespan=lifespan, title="Tignan API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # Change to your Vercel URL later
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Attach the test router
 app.include_router(core.router)
+app.include_router(enroll_router)
+app.include_router(checkins_router)
+
