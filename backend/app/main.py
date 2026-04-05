@@ -11,6 +11,7 @@ from app.api.events.router import router as event_router
 from app.api.evacuees.router import router as enroll_router
 from app.api.checkins.router import router as checkins_router
 from app.api.alerts.router import router as alert_router
+from app.api.ws.router import router as ws_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -33,4 +34,5 @@ app.include_router(event_router)
 app.include_router(enroll_router)
 app.include_router(checkins_router)
 app.include_router(alert_router)
+app.include_router(ws_router)
 
