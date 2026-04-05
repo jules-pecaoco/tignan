@@ -69,7 +69,6 @@ class Evacuee(SQLModel, table=True):
     battery: int | None = Field(default=None, ge=0, le=100)
     enrolled_at: datetime = Field(default_factory=lambda: datetime.now(tz=timezone.utc))
 
-
 # ===============
 # ALERT TABLE
 # ===============
