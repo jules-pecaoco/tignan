@@ -1,2 +1,0 @@
-# tignan
-KomSai Hackaton submission
