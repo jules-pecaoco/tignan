@@ -29,10 +29,10 @@ By linking these parties efficiently, we hope to foster a more disaster-ready co
 
 Tignan is a monorepo spanning web and mobile:
 
-- `admin/`: Web-based command center (React 19, Vite 8, Tailwind CSS 4).
-- `rescuer/`: Mobile application for field responders (Expo, NativeWind, Mapbox).
+- `admin/`: Web-based command center (React, Vite , Tailwind CSS).
+- `rescuer/`: Web-based command center (React, Vite , Tailwind CSS, Mapbox).
 - `user/`: Mobile application for citizens needing assistance (Expo, NativeWind).
-- `schema/`: Database, authentication, and real-time backend (PostgreSQL & Supabase).
+- `schema/`: Database, authentication, and real-time backend (Supabase).
 
 ## Future Expansions
 
