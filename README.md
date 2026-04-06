@@ -31,5 +31,22 @@ Tignan is a monorepo spanning web and mobile:
 - `user/`: Mobile application for citizens needing assistance (Expo, NativeWind).
 - `schema/`: Database, authentication, and real-time backend (PostgreSQL & Supabase).
 
+## Future Expansions
+
+While the current iteration focuses on core SOS alerting and routing, there are several planned incremental updates to enhance the platform's capabilities:
+- **In-App Chat Communication**: Enabling direct messaging between the citizen in distress and the assigned rescuer to provide ongoing updates and first-aid instructions.
+- **Push Notifications System**: Implementing robust background push notifications to ensure rescuers are alerted immediately, even when the application is closed.
+- **Offline SMS Fallback**: Allowing users without mobile data or internet access to trigger an SOS alert or receive updates via standard SMS text messaging.
+- **Multi-Language & Localization Support**: Adding support for local dialects (e.g., Tagalog, Cebuano) to ensure the application is accessible to more communities.
+- **Enhanced Role Management**: Expanding the admin dashboard to include granular roles such as dispatchers, field commanders, and system administrators for better organizational control.
+
+## Acknowledgements
+
+This project was developed with the assistance of several AI tools for documentation, scaffolding, planning, and assisted coding:
+- Claude
+- Gemini
+- ChatGPT
+
 ---
-*Built with Mwamwa for Komsai Hack 2026: RiskReady*
+*Built with Love for Komsai Hack 2026: RiskReady*
+*Team Semicolon*
