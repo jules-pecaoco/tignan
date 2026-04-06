@@ -1,34 +1,35 @@
-# 👁️ Tignan: SOS and Emergency Response System
-### 🏆 Official Entry for Komsai Hack 2026: RiskReady
+# Tignan: SOS and Emergency Response System
 
-Tignan is a comprehensive, real-time platform designed to streamline emergency response and citizen safety. Built to answer the call of **RiskReady: Tech Solutions for Disaster Readiness**, Tignan empowers communities by increasing awareness in Disaster Risk Reduction and Management, fostering a more resilient society during times of crisis.
+**Official Entry for Komsai Hack 2026: RiskReady**
 
-## 🌟 The Challenge & Our Solution
+Tignan is a real-time emergency response platform built to streamline citizen safety and incident management. It was developed to answer the call of RiskReady: Tech Solutions for Disaster Readiness, aiming to empower communities and increase awareness of disaster risk reduction and management.
 
-The **Komsai Hack 2026** challenged us to leverage technology to support people during emergencies and promote resiliency. 
+## The Challenge
 
-Tignan answers this challenge by providing a unified ecosystem where:
-- **Citizens** can instantly broadcast SOS alerts with precise geographical data.
-- **Rescuers** receive dynamic, fast-tracked dispatch information to reduce response times.
-- **Command Centers (Admins)** gain live, comprehensive map-based monitoring to efficiently orchestrate incident resolution.
+The Komsai Hack 2026 required a solution to support people during emergencies and promote resiliency in times of crisis. 
 
-By connecting people in crisis directly to the nearest available support groups, Tignan is our step toward a truly disaster-ready and resilient community.
+Tignan addresses this by connecting people directly to the nearest available support groups. It provides a unified system where:
+- Citizens can broadcast emergency alerts with their exact location.
+- Rescuers get fast-tracked dispatch information so they can arrive faster.
+- Command centers have a live map-based view to orchestrate the response.
 
-## 🚀 Core Functions
+By linking these parties efficiently, we hope to foster a more disaster-ready community.
 
-- **Real-time SOS Alerting**: Instant emergency triggers with precise location tracking.
-- **Dynamic Dispatching**: Fast-track SOS incidents to the nearest available responders.
-- **Live Administrative Monitoring**: Comprehensive map-based incident and responder management.
-- **Incident Lifecycle Management**: Full tracking from alert creation to resolution.
+## Features
 
-## 💻 Technical Overview
+- Real-time SOS Alerting: Instant emergency triggers with location tracking.
+- Dynamic Dispatching: Route incidents to the nearest available responders.
+- Live Monitoring: Map-based dashboard for managing incidents and rescuer teams.
+- Incident Management: Track everything from the initial alert creation until the patient is safe.
 
-Designed as a novel, navigable multi-platform application, Tignan is a monorepo built using modern web and mobile technologies:
+## Technical Stack
 
-- **`admin/`**: Web-based Command Center monitoring hub (React 19, Vite 8, Tailwind CSS 4).
-- **`rescuer/`**: Mobile app for emergency responders on the field (Expo, NativeWind, Mapbox).
-- **`user/`**: Mobile app for citizens requiring immediate assistance (Expo, NativeWind).
-- **`schema/`**: Database, authentication, and real-time backend infrastructure (PostgreSQL & Supabase).
+Tignan is a monorepo spanning web and mobile:
+
+- `admin/`: Web-based command center (React 19, Vite 8, Tailwind CSS 4).
+- `rescuer/`: Mobile application for field responders (Expo, NativeWind, Mapbox).
+- `user/`: Mobile application for citizens needing assistance (Expo, NativeWind).
+- `schema/`: Database, authentication, and real-time backend (PostgreSQL & Supabase).
 
 ---
-*Built with ❤️ for Komsai Hack 2026: RiskReady*
+*Built with Mwamwa for Komsai Hack 2026: RiskReady*
