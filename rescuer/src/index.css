@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #111110;
+  --color-auth: #0A0A09;
+  --color-card: #1A1A18;
+  --color-border: #2C2C2A;
+  --color-primary: #F1EFE8;
+  --color-muted: #888780;
+  --color-accent: #E24B4A;
+  --color-success: #639922;
+  --color-warning: #EF9F27;
+
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary overflow-hidden font-sans;
+  }
+}
+
+@layer components {
+  .auth-container {
+    @apply flex justify-center items-center min-h-screen bg-auth p-6 box-border overflow-y-auto;
+  }
+
+  .auth-card {
+    @apply w-full bg-background rounded-xl border border-border shadow-2xl overflow-hidden p-10;
+  }
+
+  .auth-split {
+    @apply grid min-h-screen w-full;
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .auth-hero {
+    @apply relative flex flex-col justify-between p-12 overflow-hidden;
+    background: linear-gradient(160deg, #1A1A18 0%, #111110 40%, #0A0A09 100%);
+    border-right: 1px solid var(--color-border);
+  }
+
+  .auth-hero::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(ellipse at 30% 20%, rgba(226, 75, 74, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .auth-form-panel {
+    @apply flex flex-col justify-center overflow-y-auto;
+    max-height: 100vh;
+    padding: 3rem 4rem;
+  }
+
+  .form-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+  }
+
+  .input-field {
+    @apply w-full bg-card border border-border text-primary font-mono px-3.5 py-3 rounded-lg outline-none focus:border-accent transition-colors text-sm box-border;
+  }
+
+  .input-field::placeholder {
+    @apply text-muted/60 uppercase tracking-wider text-xs;
+  }
+
+  .section-label {
+    @apply font-mono text-[10px] text-muted tracking-[0.15em] font-bold uppercase mb-2;
+  }
+
+  .select-field {
+    @apply w-full bg-card border border-border text-primary font-mono px-3.5 py-3 rounded-lg outline-none focus:border-accent transition-colors text-sm box-border appearance-none cursor-pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888780' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+  }
+}
+
+@layer utilities {
+  .monospace {
+    @apply font-mono;
+  }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-card rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted;
+}
+
+/* Pulse animation for GPS */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
