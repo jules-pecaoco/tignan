@@ -34,6 +34,54 @@ Tignan is a monorepo spanning web and mobile:
 - `user/`: Mobile application for citizens needing assistance (Expo, NativeWind).
 - `schema/`: Database, authentication, and real-time backend (Supabase).
 
+## Demo Access
+
+Try the live applications using the test accounts below.
+
+### Rescuer Dashboard (Web)
+
+- **Site**: [rescuer.tignan.app](https://tignan-rescuer.vercel.app)
+- **Sample Account**:
+  - Email: `rescuer@test.com`
+  - Password: `password123`
+
+### Admin Command Center (Web)
+
+- **Site**: [admin.tignan.app](https://tignan-admin.vercel.app)
+- **Sample Account**:
+  - Email: `admin@test.com`
+  - Password: `password123`
+
+### User Mobile App (Android)
+
+- **APK**: [Download Latest Build](https://example.com/tignan.apk)
+- **Sample Account**:
+  - Email: `user@test.com`
+  - Password: `password123`
+
+## Screenshots
+
+### Admin Dashboard
+
+| Pending Rescuer Applications                                      | Details of Rescuer                                       |
+| ----------------------------------------------------------------- | -------------------------------------------------------- |
+| ![Pending Applications](docs/screenshots/pending-application.png) | ![Details+Rescuer](docs/screenshots/details-rescuer.png) |
+
+### Rescuer Dashboard
+
+| Active Incidents                                           |
+| ---------------------------------------------------------- |
+| ![Active Incidents](docs/screenshots/active-incidents.png) |
+
+| Map Navigation |
+| --------------------------------------------------------------------------------- | ![Map Navigation](docs/screenshots/map-navigation.png) |
+
+### User Mobile App
+
+| SOS Screen                                     | Location Tracking                                            |
+| ---------------------------------------------- | ------------------------------------------------------------ |
+| ![SOS Screen](docs/screenshots/sos-screen.png) | ![Location Tracking](docs/screenshots/location-tracking.png) |
+
 ## Future Expansions
 
 While the current iteration focuses on core SOS alerting and routing, there are several planned incremental updates to enhance the platform's capabilities:
