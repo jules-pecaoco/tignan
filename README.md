@@ -6,7 +6,7 @@ _Kita ang Aksyon sa Krisis._
 
 Tignan is a real-time emergency response platform built to streamline citizen safety and incident management. It was developed to answer the call of _RiskReady: Tech Solutions for Disaster Readiness_, aiming to empower communities and increase awareness of disaster risk reduction and management.
 
-## 🔎 The Challenge
+## The Challenge
 
 The Komsai Hack 2026 required a solution to support people during emergencies and promote resiliency in times of crisis.
 
@@ -18,14 +18,14 @@ Tignan addresses this by connecting people directly to the nearest available sup
 
 By linking these parties efficiently, we hope to foster a more disaster-ready community.
 
-## ✨ Features
+## Features
 
 - **Real-time SOS Alerting** — Instant emergency triggers with location tracking.
 - **Dynamic Dispatching** — Route incidents to the nearest available responders.
 - **Live Monitoring** — Map-based dashboard for managing incidents and rescuer teams.
 - **Incident Management** — Track everything from the initial alert creation until the patient is safe.
 
-## 🛠️ Technical Stack
+## Technical Stack
 
 Tignan is a monorepo spanning web and mobile:
 
@@ -36,7 +36,7 @@ Tignan is a monorepo spanning web and mobile:
 | `user/` | Mobile app for citizens | Expo, NativeWind |
 | `schema/` | Database & backend | Supabase |
 
-## 🔑 Demo Access
+## Demo Access
 
 Try the live applications using the test accounts below.
 
@@ -46,7 +46,7 @@ Try the live applications using the test accounts below.
 | **Admin** (Web) | [tignan-admin.vercel.app](https://tignan-admin.vercel.app) | `admin@test.com` | `password123` |
 | **User** (Android) | [Download APK](https://example.com/tignan.apk) | `user@test.com` | `password123` |
 
-## 📸 Screenshots
+## Screenshots
 
 ### Admin Dashboard
 
@@ -66,7 +66,7 @@ Try the live applications using the test accounts below.
 |---|---|
 | ![SOS Screen](docs/screenshots/sos-screen.jpg) | ![Location Tracking](docs/screenshots/location-tracking.jpg) |
 
-## 🚀 Future Expansions
+## Future Expansions
 
 While the current iteration focuses on core SOS alerting and routing, there are several planned incremental updates:
 
@@ -76,7 +76,7 @@ While the current iteration focuses on core SOS alerting and routing, there are 
 - **Multi-Language Support** — Support for local dialects (e.g., Tagalog, Cebuano) for broader accessibility.
 - **Enhanced Role Management** — Granular roles such as dispatchers, field commanders, and system administrators.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 This project was developed with the assistance of AI tools for documentation, scaffolding, planning, and assisted coding:
 
